@@ -1,0 +1,28 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: en spam\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-14 13:03+0200\n"
+"PO-Revision-Date: 2011-12-14 13:11+0200\n"
+"Last-Translator: Amiad Bareli <amiadb [at] gmail>\n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: /home/amiad/desktop/en-spam\n"
+
+# inside "Hebrew" you need write your language.
+#: /home/amiad/desktop/en-spam/en-spam.php:28
+#, php-format
+msgid "To respond in a different language from Hebrew, you need to enable cookies or add the number %s at the end of the response."
+msgstr "כדי להגיב בשפה שאיננה עברית, עליך לאפשר עוגיות בדפדפן או להוסיף את המספר %s לסוף התגובה."
+
+# inside "Hebrew" you need write your language.
+#: /home/amiad/desktop/en-spam/en-spam.php:29
+#, php-format
+msgid "To respond, you need to enable cookies or add the number %s at the end of the response."
+msgstr "כדי להגיב, עליך לאפשר עוגיות בדפדפן או להוסיף את המספר %s לסוף התגובה."
+
