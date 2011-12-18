@@ -16,6 +16,7 @@ Users that blocking cookies can to comment if they add code to thier comment .
 
 Plugin has a white list of languages ​​that are not spam and comments are automatically approved if it is the language of the blog.
 Whitelisted languages ​​currently:
+
 * Hebrew
 * Georgian
 
