@@ -3,24 +3,16 @@ Contributors: hatul
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4HTHWS3LGDDPJ
 Tags: anti-spam, antispam, block spam, bot, comment, comment spam, comments, spam, Spam Free, spambot, hebrew
 Requires at least: 2.0
-Tested up to: 3.3
-Stable tag: 0.2
+Tested up to: 3.4.1
+Stable tag: 0.5
 
-Block spam with cookies, JavaScript and language filtering.
+Block spam with cookies and JavaScript.
 All Spambots will remain away from your blog.
 
 == Description ==
 
 "En Spam" blocks totally comments of bots by cookies and javascript. Bots can't use cookies and javascript and therefore will not be able to comment.
-Users that blocking cookies can to comment if they add code to thier comment .
-
-Plugin has a white list of languages ​​that are not spam and comments are automatically approved if it is the language of the blog.
-Whitelisted languages ​​currently:
-
-* Hebrew
-* Georgian
-
-To add a language please contact me.
+Users that blocking cookies or Javascript can to comment after transfer in special page.
 
 "En Spam" means "have not spam" in Hebrew.
 
@@ -32,6 +24,9 @@ To add a language please contact me.
 * Or to install via Admin Panel.
 
 == Changelog ==
+= 0.5 =
+* Disable language filtering
+* Add transfer page for blocked comeenters
 = 0.2 =
 * First Stable Version
 
