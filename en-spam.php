@@ -3,7 +3,7 @@
 Plugin Name: En Spam
 Description: Block Spam with Cookies and JavaScript Filtering.
 Plugin URI: http://hatul.info/en-spam
-Version: 0.5
+Version: 0.6
 Author: Hatul
 Author URI: http://hatul.info
 License: GPL http://www.gnu.org/copyleft/gpl.html
@@ -12,8 +12,10 @@ add_filter('preprocess_comment','ens_check_comment');
 function ens_check_comment($comment){
 	if((isset($_COOKIE['comment_author_'.COOKIEHASH])) 
 	  || (is_user_logged_in())
-	  || ($_POST['code']==get_option('ens_code'))) 
-	  	return $comment;
+	  || ($_POST['code']==get_option('ens_code'))) {
+	  	$comment['comment_content']=stripcslashes($comment['comment_content']);
+		return $comment;
+	}
 	else ens_block_page();
 }
 function ens_block_page(){
@@ -23,7 +25,7 @@ function ens_block_page(){
 		if($name=='comment')
 			$message.=sprintf('<label for="comment">%s</label><br /><textarea id="comment" name="comment">%s</textarea><br />',__('Your comment:','en-spam'),$value);
 		else
-			$message.=sprintf('<input type="hidden" name="%s" value="%s" />',$name,$value);
+			$message.=sprintf('<input type="hidden" name="%s" value="%s" />',$name,stripcslashes($value));
 	}
 	$message.=sprintf('<input type="hidden" name="code" value="%s" />',get_option('ens_code'));
 	$message.=sprintf('<input type="submit" name="submit" value="%s" />',__( 'Post Comment' ));
