@@ -3,7 +3,7 @@
 Plugin Name: En Spam
 Description: Block Spam with Cookies and JavaScript Filtering.
 Plugin URI: http://hatul.info/en-spam
-Version: 0.6.1
+Version: 0.7
 Author: Hatul
 Author URI: http://hatul.info
 License: GPL http://www.gnu.org/copyleft/gpl.html
@@ -12,32 +12,32 @@ add_filter('preprocess_comment','ens_check_comment');
 function ens_check_comment($comment){
 	if((isset($_COOKIE['comment_author_'.COOKIEHASH]))
 	  || (is_user_logged_in())
-	  || ($_POST['code']==get_option('ens_code'))) {
-	  	$comment['comment_content']=stripcslashes($comment['comment_content']);
+	  || ($_POST['code'] == get_option('ens_code'))) {
+	  	$comment['comment_content'] = stripcslashes($comment['comment_content']);
 		return $comment;
 	}
 	else ens_block_page();
 }
 function ens_block_page(){
-	$message=sprintf(__('For to post comment, you need to enable cookies and JavaScript or to click on "%s" button in this page','en-spam'),__( 'Post Comment' ));
-	$message.='<form method="post">';
+	$message = sprintf(__('For to post comment, you need to enable cookies and JavaScript or to click on "%s" button in this page', 'en-spam'), __( 'Post Comment' ));
+	$message .= '<form method="post">';
 	foreach($_POST as $name=>$value){
-		if($name=='comment')
-			$message.=sprintf('<label for="comment">%s</label><br /><textarea id="comment" name="comment">%s</textarea><br />',__('Your comment:','en-spam'),$value);
+		if($name == 'comment')
+			$message .= sprintf('<label for="comment">%s</label><br /><textarea id="comment" name="comment">%s</textarea><br />',__('Your comment:','en-spam'),$value);
 		else
-			$message.=sprintf('<input type="hidden" name="%s" value="%s" />',$name,stripcslashes($value));
+			$message .= sprintf('<input type="hidden" name="%s" value="%s" />', $name, stripcslashes($value));
 	}
-	$message.=sprintf('<input type="hidden" name="code" value="%s" />',get_option('ens_code'));
-	$message.=sprintf('<input type="submit" name="submit" value="%s" />',__( 'Post Comment' ));
-	$message.='</form>';
+	$message .= sprintf('<input type="hidden" name="code" value="%s" />', get_option('ens_code'));
+	$message .= sprintf('<input type="submit" name="submit" value="%s" />', __( 'Post Comment' ));
+	$message .= '</form>';
 
 	wp_die($message);
 }
-add_action('init','ens_add_js');
+add_action('init', 'ens_add_js');
 function ens_add_js(){
 	if(!is_user_logged_in()){
-		add_action('wp_head','ens_js_cookie');
-		add_filter('comment_form_field_comment','ens_cookie_to_commenter');
+		add_action('wp_head', 'ens_js_cookie');
+		add_filter('comment_form_field_comment', 'ens_cookie_to_commenter');
 	}
 }
 function ens_js_cookie(){
