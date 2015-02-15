@@ -3,14 +3,14 @@
 Plugin Name: En Spam
 Description: Block Spam with Cookies and JavaScript Filtering.
 Plugin URI: http://hatul.info/en-spam
-Version: 0.6
+Version: 0.6.1
 Author: Hatul
 Author URI: http://hatul.info
 License: GPL http://www.gnu.org/copyleft/gpl.html
 */
 add_filter('preprocess_comment','ens_check_comment');
 function ens_check_comment($comment){
-	if((isset($_COOKIE['comment_author_'.COOKIEHASH])) 
+	if((isset($_COOKIE['comment_author_'.COOKIEHASH]))
 	  || (is_user_logged_in())
 	  || ($_POST['code']==get_option('ens_code'))) {
 	  	$comment['comment_content']=stripcslashes($comment['comment_content']);
@@ -30,7 +30,7 @@ function ens_block_page(){
 	$message.=sprintf('<input type="hidden" name="code" value="%s" />',get_option('ens_code'));
 	$message.=sprintf('<input type="submit" name="submit" value="%s" />',__( 'Post Comment' ));
 	$message.='</form>';
-	
+
 	wp_die($message);
 }
 add_action('init','ens_add_js');
@@ -39,7 +39,7 @@ function ens_add_js(){
 		add_action('wp_head','ens_js_cookie');
 		add_filter('comment_form_field_comment','ens_cookie_to_commenter');
 	}
-}	
+}
 function ens_js_cookie(){
 	?>
 	<!-- En Spam Script -->
@@ -71,7 +71,7 @@ function ens_js_cookie(){
 	}
 	</script>
 	<?php
-}	
+}
 function ens_cookie_to_commenter($field){
 	$field=str_replace('<textarea','<textarea onfocus="cookieToCommenter()"',$field);
 	return $field;
@@ -87,7 +87,7 @@ load_plugin_textdomain('en-spam', false, dirname( plugin_basename( __FILE__ ) ) 
 function ens_check_comment($comment_all){
 	$hasCheckLang=false; // lang check is disabled now.
 	$comment=$comment_all['comment_content'];
-	if ($hasCheckLang && ens_checkLang($comment)) return $comment_all; 
+	if ($hasCheckLang && ens_checkLang($comment)) return $comment_all;
 	$commentAfterCheck=ens_more_checks($comment);
 	if($commentAfterCheck) {
 		$comment_all['comment_content']=$commentAfterCheck;
@@ -98,7 +98,7 @@ function ens_check_comment($comment_all){
 	}
 }
 function ens_more_checks($comment){
-	if((isset($_COOKIE['comment_author_'.COOKIEHASH])) 
+	if((isset($_COOKIE['comment_author_'.COOKIEHASH]))
 	|| (is_user_logged_in())) return $comment;
 	elseif(strpos($comment,get_option('ens_code'))!==false) {
 		$comment=str_replace(get_option('ens_code'),'',$comment);
@@ -108,7 +108,7 @@ function ens_more_checks($comment){
 }
 function ens_checkLang($comment){
 	if(($lang_in_whitelist()) &&
-	 preg_match('/['.$alephbet[$lang].']/',$comment)) 
+	 preg_match('/['.$alephbet[$lang].']/',$comment))
 	 	return true;
 	 else return false;
 }
