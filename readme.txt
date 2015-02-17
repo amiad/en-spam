@@ -7,12 +7,16 @@ Tested up to: 4.1
 Stable tag: 0.7.2
 
 Block spam with cookies and JavaScript.
-All Spambots will remain away from your blog.
+All Spambots will remain away from your blog. Without settings or Captcha, install and forget the spam.
 
 == Description ==
 
 "En Spam" blocks totally comments of bots by cookies and javascript. Bots can't use cookies and javascript and therefore will not be able to comment.
 Users that blocking cookies or Javascript can to comment after transfer in special page.
+
+The plugin is transparent to your visitors, only bots will block.
+
+You can see how many spambots blocked in dashboard widget. 
 
 "En Spam" means "have not spam" in Hebrew.
 
