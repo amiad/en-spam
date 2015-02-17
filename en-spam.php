@@ -61,7 +61,7 @@ function ens_add_dashboard_widgets() {
 }
 add_action( 'wp_dashboard_setup', 'ens_add_dashboard_widgets' );
 function ens_dashboard_widget_function() {
-	echo get_option('ens_counter');
+	echo get_option('ens_counter', 0);
 }
 
 load_plugin_textdomain('en-spam', false, dirname( plugin_basename( __FILE__ ) ) );
