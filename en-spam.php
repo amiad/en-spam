@@ -46,11 +46,12 @@ function ens_init_code(){
 	update_option('ens_code', rand(10000, 99999));
 }
 
-add_action('wp_enqueue_scripts', function(){
+add_action('wp_enqueue_scripts', 'ens_scripts');
+function ens_scripts() {
 	wp_register_script('en-spam', plugins_url('en-spam.js', __FILE__), array('jquery'));
 	wp_localize_script('en-spam', 'data', array('hash'=>COOKIEHASH));
 	wp_enqueue_script('en-spam');
-});
+}
 
 function ens_add_dashboard_widgets() {
 	wp_add_dashboard_widget(
