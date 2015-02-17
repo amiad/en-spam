@@ -3,7 +3,7 @@
 Plugin Name: En Spam
 Description: Block Spam with Cookies and JavaScript Filtering.
 Plugin URI: http://hatul.info/en-spam
-Version: 0.7.1
+Version: 0.7.2
 Author: Hatul
 Author URI: http://hatul.info
 License: GPL http://www.gnu.org/copyleft/gpl.html
@@ -60,6 +60,7 @@ function ens_add_dashboard_widgets() {
                  'ens_dashboard_widget_function'
         );
 }
+
 add_action( 'wp_dashboard_setup', 'ens_add_dashboard_widgets' );
 function ens_dashboard_widget_function() {
 	echo get_option('ens_counter', 0);
