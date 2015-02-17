@@ -14,7 +14,7 @@ All Spambots will remain away from your blog. Without settings or Captcha, insta
 "En Spam" blocks totally comments of bots by cookies and javascript. Bots can't use cookies and javascript and therefore will not be able to comment.
 Users that blocking cookies or Javascript can to comment after transfer in special page.
 
-The plugin is transparent to your visitors, only bots will block.
+The plugin is transparent to your visitors, only bots will be blocked.
 
 You can see how many spambots blocked in dashboard widget. 
 
