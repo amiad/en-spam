@@ -28,19 +28,25 @@ You can see how many spambots blocked in dashboard widget.
 * Or to install via Admin Panel.
 
 ## Changelog ##
+
 ### 0.7.2 ###
 * Add support to old PHP versions
+
 ### 0.7.1 ###
 * Add widget with block counter to the dashboard
+
 ### 0.7 ###
 * Move JS to en-spam.js
 * Improve the code
 * Fix encoding bug
+
 ### 0.6 ###
 * Fix Adding slashs to specific characters
+
 ### 0.5 ###
 * Disable language filtering
 * Add transfer page for blocked commenters
+
 ### 0.2 ###
 * First Stable Version
 
