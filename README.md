@@ -1,10 +1,10 @@
 # En Spam #
-**Contributors:** hatul  
-**Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4HTHWS3LGDDPJ  
-**Tags:** anti-spam, antispam, block spam, bot, comment, comment spam, comments, spam, Spam Free, spambot, hebrew  
-**Requires at least:** 2.0  
-**Tested up to:** 4.1  
-**Stable tag:** 0.7.2  
+**Contributors:** hatul
+**Donate link:** https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4HTHWS3LGDDPJ
+**Tags:** anti-spam, antispam, block spam, bot, comment, comment spam, comments, spam, Spam Free, spambot, hebrew
+**Requires at least:** 2.0
+**Tested up to:** 4.5
+**Stable tag:** 0.7.2
 
 Block spam with cookies and JavaScript.
 All Spambots will remain away from your blog. Without settings or Captcha, install and forget the spam.
@@ -16,7 +16,7 @@ Users that blocking cookies or Javascript can to comment after transfer in speci
 
 The plugin is transparent to your visitors, only bots will be blocked.
 
-You can see how many spambots blocked in dashboard widget. 
+You can see how many spambots blocked in dashboard widget.
 
 "En Spam" means "have not spam" in Hebrew.
 
