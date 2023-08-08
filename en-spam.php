@@ -3,7 +3,7 @@
 Plugin Name: En Spam
 Description: Block Spam with Cookies and JavaScript Filtering.
 Plugin URI: http://hatul.info/en-spam
-Version: 0.7.2
+Version: 0.7.3
 Author: Hatul
 Author URI: http://hatul.info
 License: GPL http://www.gnu.org/copyleft/gpl.html
@@ -27,10 +27,12 @@ function ens_block_page(){
 	$message = sprintf(__('For to post comment, you need to enable cookies and JavaScript or to click on "%s" button in this page', 'en-spam'), __( 'Post Comment' ));
 	$message .= '<form method="post">';
 	foreach ($_POST as $name=>$value){
-		if ($name == 'comment')
+		if ($name == 'comment'){
 			$message .= sprintf('<label for="comment">%s</label><br /><textarea id="comment" name="comment">%s</textarea><br />',__('Your comment:', 'en-spam'), $value);
-		else
+		}
+		elseif (is_string($value)){
 			$message .= sprintf('<input type="hidden" name="%s" value="%s" />', $name, stripcslashes($value));
+		}
 	}
 	$message .= sprintf('<input type="hidden" name="code" value="%s" />', get_option('ens_code'));
 	$message .= sprintf('<input type="submit" name="submit" value="%s" />', __( 'Post Comment' ));
@@ -49,7 +51,7 @@ function ens_init_code(){
 add_action('wp_enqueue_scripts', 'ens_scripts');
 function ens_scripts() {
 	wp_register_script('en-spam', plugins_url('en-spam.js', __FILE__), array('jquery'));
-	wp_localize_script('en-spam', 'data', array('hash'=>COOKIEHASH));
+	wp_localize_script('en-spam', 'data', array('hash' => COOKIEHASH));
 	wp_enqueue_script('en-spam');
 }
 
