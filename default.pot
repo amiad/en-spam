@@ -35,3 +35,6 @@ msgstr ""
 #: /srv/http/wp/wp-content/plugins/en-spam/en-spam.php:58
 msgid "Blocked Spambots by En Spam"
 msgstr ""
+
+msgid "Enable JavaScript and cookies"
+msgstr ""

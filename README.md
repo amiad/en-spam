@@ -7,9 +7,9 @@
 
 **Requires at least:** 2.0
 
-**Tested up to:** 5.7
+**Tested up to:** 6.6
 
-**Stable tag:** 0.7.2
+**Stable tag:** 1.0
 
 Block spam with cookies and JavaScript.
 All Spambots will remain away from your blog. Without settings or Captcha, install and forget the spam.
@@ -20,6 +20,8 @@ All Spambots will remain away from your blog. Without settings or Captcha, insta
 Users that blocking cookies or Javascript can to comment after transfer in special page.
 
 The plugin is transparent to your visitors, only bots will be blocked.
+
+We protect Elementor Pro and Contact Form 7 (cf7) forms and default comments of WordPress.
 
 You can see how many spambots blocked in dashboard widget. 
 
@@ -33,6 +35,8 @@ You can see how many spambots blocked in dashboard widget.
 * Or to install via Admin Panel.
 
 ## Changelog ##
+= 1.0 =
+* Add support to Elementor form and contact form 7 (cf7)
 ### 0.7.2 ###
 * Add support to old PHP versions
 ### 0.7.1 ###
