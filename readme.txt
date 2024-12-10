@@ -1,10 +1,11 @@
 === En Spam ===
 Contributors: hatul
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4HTHWS3LGDDPJ
-Tags: anti-spam, antispam, block spam, bot, comment, comment spam, comments, spam, Spam Free, spambot, hebrew
+Tags: anti-spam, block spam, bot, comment, spam
 Requires at least: 2.0
-Tested up to: 6.6
-Stable tag: 1.0
+Tested up to: 6.7
+Stable tag: 1.1
+License: GPLv3 or later
 
 Block spam with cookies and JavaScript.
 All Spambots will remain away from your blog. Without settings or Captcha, install and forget the spam.
@@ -30,6 +31,9 @@ You can see how many spambots blocked in dashboard widget.
 * Or to install via Admin Panel.
 
 == Changelog ==
+= 1.1 =
+* Refactored plugin code into a PHP class for better structure and maintainability.
+* Fix error in Elementor Pro.
 = 1.0 =
 * Add support to Elementor form and contact form 7 (cf7)
 = 0.7.2 =
