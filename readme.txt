@@ -3,7 +3,7 @@ Contributors: hatul
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4HTHWS3LGDDPJ
 Tags: anti-spam, block spam, bot, comment, spam
 Requires at least: 2.0
-Tested up to: 6.7
+Tested up to: 7.1
 Stable tag: 1.1
 License: GPLv3 or later
 
